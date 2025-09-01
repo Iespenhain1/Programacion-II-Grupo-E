@@ -106,16 +106,16 @@ nombreP=tk.Entry(frame_doctores)
 nombreP.grid(row=1, column=1, sticky="w", pady=5, padx=5)
 #Especialidad
 etiqueta=tk.Label(frame_doctores, text="Especialidad :")
-etiqueta.grid(row=1, column=0, padx=10, pady=10, sticky="w")
+etiqueta.grid(row=2, column=0, padx=5, pady=5, sticky="w")
 opciones=["Cardiología", "Neurología", "Pediatría","Dermatología"]
 combo=ttk.Combobox(frame_doctores, values=opciones, state="readonly")
 combo.current(0) #selecciona primera opcion por defecto
-combo.grid(row=2, column=1, padx=10, pady=10)
+combo.grid(row=2, column=1, padx=5, pady=5,sticky="W")
 #Edad
 labelEdad=tk.Label(frame_doctores, text="Edad :")
 labelEdad.grid(row=3, column=0, padx=5, pady=5, sticky="w")
 spin=tk.Spinbox(frame_doctores, from_=1, to=100)
-spin.grid(row=3, column=1, padx=10, pady=10)
+spin.grid(row=3, column=1, padx=5, pady=5,sticky="w")
 #Telefono
 labelTelefono=tk.Label(frame_doctores, text="Teléfono :")
 labelTelefono.grid(row=4, column=0, sticky="w", pady=5, padx=5)
@@ -150,5 +150,6 @@ treeView.grid(row=6, column=0, columnspan=2, sticky="nsew", padx=5, pady=10)
 Scroll_y=ttk.Scrollbar(frame_doctores, orient="vertical", command=treeView.yview)
 treeView.configure(yscrollcommand=Scroll_y.set)
 Scroll_y.grid(row=6, column=2, sticky="ns")
+
 
 ventana_principal.mainloop()
