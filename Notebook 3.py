@@ -20,7 +20,7 @@ def enmascarar_fecha(texto):
         fechaN.insert(0,formato_final)      
     if len(fechaN.get())==10:
         fecha_actual=datetime.now().date()
-        fecha_nacimiento=datetime.strptime(fechaN.get(),"%d-%m-%y").date()
+        fecha_nacimiento=datetime.strptime(fechaN.get(),"%d-%m-%Y").date()
         edad=fecha_actual.year-fecha_nacimiento.year
         edadVar.set(edad)
     else:
@@ -50,11 +50,10 @@ nombreP.grid(row=0, column=1, sticky="w", pady=5, padx=5)
 #Fecha de nacimiento
 labelFechaN=tk.Label(frame_pacientes, text="Fecha de Nacimiento :")
 labelFechaN.grid(row=1, column=0, sticky="w", pady=5, padx=5)
-fechaN=tk.Entry(frame_pacientes)
-fechaN.grid(row=1, column=1, sticky="w", pady=5, padx=5)
 #Llamado a la funcion de enmascarar fecha
 validacion_fecha=ventana_principal.register(enmascarar_fecha)
-fechaN=ttk.Entry(frame_pacientes,validate='key', validatecommand=(validacion_fecha,'XP'))
+fechaN=ttk.Entry(frame_pacientes,validate='key', validatecommand=(validacion_fecha,'%P'))
+fechaN.grid(row=1, column=1, sticky="w", pady=5, padx=5)
 #Edad (readonly)
 labelEdad=tk.Label(frame_pacientes, text="Edad :")
 labelEdad.grid(row=2, column=0, sticky="w", pady=5, padx=5)
