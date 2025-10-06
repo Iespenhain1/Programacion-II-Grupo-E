@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGINA CON FORMULARIO</title>
+</head>
+<body>
+    <form name="FORMULARIO I">
+        Nombre:<input type="text"name="nombre"><br>
+        Dirección:<input type="text"name="dirección"><br>
+        Calle:<input type="text"name="calle"><br>
+        Carnet de identidad:<input type="text"name="carnet" size="5"mazlength="5" value="99999"><br>
+        Sintomas:<br>
+        <input type="checkbox"name="Fiebre" value="Fiebre"checked>Fiebre<br>
+        <input type="checkbox"name="Mareos" value="Mareos"checked>Mareos<br>
+        <input type="checkbox"name="Dolor de cabeza" value="Dolor"checked>Dolor de cabeza<br>
+        Género:<br>
+        <input type="radio"name="genero" value="Masculino">Masculino<br>
+        <input type="radio"name="genero" value="Femenino"checked>Femenino<br>
+        Seguro:
+        <select name="Seguro">
+            <option selected>Caja Petrolera</option>
+            <option value="Nacional">Caja Nacional</option>
+            <option value="Bancaria">Caja Bancaria</option>
+        </select>
+        <br>
+        Dirección: <br>
+        <textarea name="Dirección" rows="10" cols="14"></textarea>
+        <br>
+        Puede enviar esta solicitud al administrador del sistema: <br>
+        <input type="submit"name=enviar><br>
+        Si se ha equivocado, pulse para volver a comenzar: <br>
+        <input type="reset"><br>
+    </form>  
+</body>
+</html>
