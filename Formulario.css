@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(132, 151, 204);
+    font-family: Arial;
+    margin:10px;
+}
+textarea{
+    border:2px solid rgb(0, 0, 0);
+    padding:10px;
+}

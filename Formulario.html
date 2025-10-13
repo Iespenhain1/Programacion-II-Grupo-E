@@ -3,34 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAGINA CON FORMULARIO</title>
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" href="Formulario.css">
 </head>
 <body>
-    <form name="FORMULARIO I">
-        Nombre:<input type="text"name="nombre"><br>
-        Dirección:<input type="text"name="dirección"><br>
-        Calle:<input type="text"name="calle"><br>
-        Carnet de identidad:<input type="text"name="carnet" size="5"mazlength="5" value="99999"><br>
-        Sintomas:<br>
-        <input type="checkbox"name="Fiebre" value="Fiebre"checked>Fiebre<br>
-        <input type="checkbox"name="Mareos" value="Mareos"checked>Mareos<br>
-        <input type="checkbox"name="Dolor de cabeza" value="Dolor"checked>Dolor de cabeza<br>
-        Género:<br>
-        <input type="radio"name="genero" value="Masculino">Masculino<br>
-        <input type="radio"name="genero" value="Femenino"checked>Femenino<br>
-        Seguro:
-        <select name="Seguro">
-            <option selected>Caja Petrolera</option>
-            <option value="Nacional">Caja Nacional</option>
-            <option value="Bancaria">Caja Bancaria</option>
-        </select>
-        <br>
-        Dirección: <br>
-        <textarea name="Dirección" rows="10" cols="14"></textarea>
-        <br>
-        Puede enviar esta solicitud al administrador del sistema: <br>
-        <input type="submit"name=enviar><br>
-        Si se ha equivocado, pulse para volver a comenzar: <br>
+    <form>
+    Completar: <br> 
+    <!--Color-->
+    Elija un color:
+        <input type="color"name="color"value="#000000"> <br>
+    <!--Recuadro-->
+    Escriba un mensaje <br>
+        <textarea name="Escriba aqui" rows="5" cols="50" placeholder="por favor, escriba aqui"></textarea> <br>
+    <!--Opciones-->
+    Elija una opción: <br>
+        <select name="opción">
+            <option selected>Java</option>
+            <option value="opción">C++</option>
+            <option value="opción">Python</option>
+        </select> <br>
+    <!--Checkbox-->
+        <input type="checkbox"name="1ro" value="1ro">1ro
+        <input type="checkbox"name="2do" value="2do">2do
+        <input type="checkbox"name="3ro" value="3ro">3ro<br>
+    Rellene las siguientes opciones: <br>
+    <!--Fecha-->
+    Elija una fecha:
+        <input type="date" name="fecha"><br>
+    <!--Fichero-->
+    Elija un fichero:
+        <input type="file"name="fichero"> <br>
+    <!--Lista-->
+        <select name="lista"multiple size="4">
+            <option value="1ro">1ro</option>
+            <option value="2do">2do</option>
+            <option value="3ro">3ro</option>
+            <option value="4to">4to</option>
+        </select> <br>
+    <!--Botoness-->
+    <input type="submit"name=enviar>
         <input type="reset"><br>
     </form>  
 </body>
