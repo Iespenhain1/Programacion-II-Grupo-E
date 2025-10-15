@@ -1,0 +1,11 @@
+create database clinica;
+use clinica;
+create table pacientes(
+	id_pacientes int auto_increment primary key,
+    nombre VARCHAR(100),
+    edad int,
+    genero varchar(10),
+    diagnostico varchar(150)
+);
+insert into pacientes(nombre,edad,genero,diagnostico)values('Carlos Castillo',20,'masculino','diabetes');
+select*from pacientes;
