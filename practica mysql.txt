@@ -7,5 +7,19 @@ create table pacientes(
     genero varchar(10),
     diagnostico varchar(150)
 );
-insert into pacientes(nombre,edad,genero,diagnostico)values('Carlos Castillo',20,'masculino','diabetes');
+insert into pacientes(nombre,edad,genero,diagnostico)values('Martin Saucedo',35,'masculino','diabetes');
 select*from pacientes;
+update pacientes set diagnostico='anemia' where id_pacientes=1;
+delete from pacientes where id_pacientes=1;
+
+create table doctor(
+	id_doctor int auto_increment primary key,
+    nombre varchar(50),
+    CI varchar(10),
+    correo varchar(50),
+    fecha_ingreso date
+);
+insert into doctor(nombre,CI,correo,fecha_ingreso)values('Ana Ramos','8734923','an.ramos@gmail.com','2025-09-12');
+select*from doctor;
+update doctor set fecha_ingreso='2025-10-17' where id_doctor=5;
+delete from doctor where id_doctor=3;
